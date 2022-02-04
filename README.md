@@ -1,0 +1,2 @@
+# wazirXAPI
+WazirX Scraper
