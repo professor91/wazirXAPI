@@ -1,0 +1,210 @@
+{
+      "wrxinr": [
+            200,
+            {
+                  "symbol": "wrxinr",
+                  "baseAsset": "wrx",
+                  "quoteAsset": "inr",
+                  "openPrice": "76.27",
+                  "lowPrice": "75.0",
+                  "highPrice": "81.15",
+                  "lastPrice": "79.86",
+                  "volume": "2483485.0",
+                  "bidPrice": "79.86",
+                  "askPrice": "79.87",
+                  "at": 1644257744000
+            }
+      ],
+      "shibinr": [
+            200,
+            {
+                  "symbol": "shibinr",
+                  "baseAsset": "shib",
+                  "quoteAsset": "inr",
+                  "openPrice": "0.00183",
+                  "lowPrice": "0.00182",
+                  "highPrice": "0.002789",
+                  "lastPrice": "0.002656",
+                  "volume": "1170477437175.0",
+                  "bidPrice": "0.002655",
+                  "askPrice": "0.002656",
+                  "at": 1644257932000
+            }
+      ],
+      "btcinr": [
+            200,
+            {
+                  "symbol": "btcinr",
+                  "baseAsset": "btc",
+                  "quoteAsset": "inr",
+                  "openPrice": "3281490",
+                  "lowPrice": "3250999.0",
+                  "highPrice": "3500000.0",
+                  "lastPrice": "3475004.0",
+                  "volume": "286.44772",
+                  "bidPrice": "3475002.0",
+                  "askPrice": "3475004.0",
+                  "at": 1644257744000
+            }
+      ],
+      "ethinr": [
+            200,
+            {
+                  "symbol": "ethinr",
+                  "baseAsset": "eth",
+                  "quoteAsset": "inr",
+                  "openPrice": "237076.5",
+                  "lowPrice": "233546.2",
+                  "highPrice": "248999.8",
+                  "lastPrice": "248849.6",
+                  "volume": "553.7835",
+                  "bidPrice": "248285.1",
+                  "askPrice": "248849.6",
+                  "at": 1644257744000
+            }
+      ],
+      "manainr": [
+            200,
+            {
+                  "symbol": "manainr",
+                  "baseAsset": "mana",
+                  "quoteAsset": "inr",
+                  "openPrice": "257.5703",
+                  "lowPrice": "250.0",
+                  "highPrice": "270.0",
+                  "lastPrice": "264.0",
+                  "volume": "489275.1",
+                  "bidPrice": "264.0",
+                  "askPrice": "264.4399",
+                  "at": 1644257748000
+            }
+      ],
+      "solinr": [
+            200,
+            {
+                  "symbol": "solinr",
+                  "baseAsset": "sol",
+                  "quoteAsset": "inr",
+                  "openPrice": "8969.03",
+                  "lowPrice": "8800.0",
+                  "highPrice": "9560.0",
+                  "lastPrice": "9508.96",
+                  "volume": "7364.972",
+                  "bidPrice": "9489.42",
+                  "askPrice": "9510.0",
+                  "at": 1644257748000
+            }
+      ],
+      "vetinr": [
+            200,
+            {
+                  "symbol": "vetinr",
+                  "baseAsset": "vet",
+                  "quoteAsset": "inr",
+                  "openPrice": "4.62951",
+                  "lowPrice": "4.61",
+                  "highPrice": "5.18555",
+                  "lastPrice": "5.16605",
+                  "volume": "8651268.0",
+                  "bidPrice": "5.16102",
+                  "askPrice": "5.16605",
+                  "at": 1644257748000
+            }
+      ],
+      "dentinr": [
+            200,
+            {
+                  "symbol": "dentinr",
+                  "baseAsset": "dent",
+                  "quoteAsset": "inr",
+                  "openPrice": "0.235",
+                  "lowPrice": "0.231",
+                  "highPrice": "0.255",
+                  "lastPrice": "0.254",
+                  "volume": "109831455.0",
+                  "bidPrice": "0.254",
+                  "askPrice": "0.255",
+                  "at": 1644257748000
+            }
+      ],
+      "polyinr": [
+            200,
+            {
+                  "symbol": "polyinr",
+                  "baseAsset": "poly",
+                  "quoteAsset": "inr",
+                  "openPrice": "39",
+                  "lowPrice": "38.102",
+                  "highPrice": "39.7",
+                  "lastPrice": "39.495",
+                  "volume": "365721.0",
+                  "bidPrice": "39.428",
+                  "askPrice": "39.495",
+                  "at": 1644257748000
+            }
+      ],
+      "scinr": [
+            200,
+            {
+                  "symbol": "scinr",
+                  "baseAsset": "sc",
+                  "quoteAsset": "inr",
+                  "openPrice": "0.8944",
+                  "lowPrice": "0.8812",
+                  "highPrice": "0.9594",
+                  "lastPrice": "0.9589",
+                  "volume": "10119491.0",
+                  "bidPrice": "0.9571",
+                  "askPrice": "0.9589",
+                  "at": 1644257752000
+            }
+      ],
+      "iostinr": [
+            200,
+            {
+                  "symbol": "iostinr",
+                  "baseAsset": "iost",
+                  "quoteAsset": "inr",
+                  "openPrice": "2.22",
+                  "lowPrice": "2.17",
+                  "highPrice": "2.38",
+                  "lastPrice": "2.36",
+                  "volume": "4088427.0",
+                  "bidPrice": "2.36",
+                  "askPrice": "2.37",
+                  "at": 1644257752000
+            }
+      ],
+      "batinr": [
+            200,
+            {
+                  "symbol": "batinr",
+                  "baseAsset": "bat",
+                  "quoteAsset": "inr",
+                  "openPrice": "72.4",
+                  "lowPrice": "71.204",
+                  "highPrice": "76.87",
+                  "lastPrice": "75.791",
+                  "volume": "73415.38",
+                  "bidPrice": "75.725",
+                  "askPrice": "75.791",
+                  "at": 1644257756000
+            }
+      ],
+      "xeminr": [
+            200,
+            {
+                  "symbol": "xeminr",
+                  "baseAsset": "xem",
+                  "quoteAsset": "inr",
+                  "openPrice": "8.819",
+                  "lowPrice": "8.558",
+                  "highPrice": "9.5",
+                  "lastPrice": "9.219",
+                  "volume": "267241.0",
+                  "bidPrice": "9.2",
+                  "askPrice": "9.233",
+                  "at": 1644257756000
+            }
+      ]
+}
