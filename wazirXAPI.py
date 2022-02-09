@@ -1,22 +1,40 @@
 from wazirx_sapi_client.rest.client import Client
 from json_db import jsdb
 
+from global_vars import mytokens_logger
+from global_vars import db24hour_logger
+
 import time
 
 class WazirXAPI():
-    def __init__(self, _fileName):
+    def __init__(self, _pathtoFile : str):
         self.client= Client()
         self.jsdb_myTokens= jsdb("database/myTokens.json")
-        self.file= jsdb(_fileName)
-        # self.newFile= _fileName
+        self.pathtoFile= _pathtoFile
+        self.jsdb_file= jsdb(_pathtoFile)
 
-    def getTokenData(self, _name: str):
-        self.file.addItem(_name, self.client.send("ticker", {"symbol" : _name}))
+    #1. get token 24 hour data from wazirX
+    #   given   - symbol of the token
+    #   returns - None
+    def getTokenData(self, _symbol: str):
+        self.jsdb_file.addItem( _symbol, 
+                                self.client.send("ticker", {"symbol" : _symbol}))
 
+    #2. get data of all my tokens
+    #   given   - None
+    #   returns - None
     def getMyTokensData(self):
         for token in self.jsdb_myTokens._cacheddata.keys():
             self.getTokenData(token)
             time.sleep(1)
+        db24hour_logger.log(self.pathtoFile, "Fetched data for my tokens")
+
+    #3. add new token to myTokens.json
+    #   given   - symbol of the token
+    #   returns - None
+    def addNewToken(self, _symbol: str):
+        self.jsdb_myTokens.addItem(_symbol, None)
+        mytokens_logger.log("database/myTokens", "Added new token to myToken dict")
 
     # dont use
     def getAllData(self):
@@ -24,16 +42,7 @@ class WazirXAPI():
         self.jsdb_test.dumpdata()
         # print(self.client.send("tickers"))
 
-    def addNewToken(self, _name: str):
-        self.jsdb_myTokens.addItem(_name, None)
 
-obj= WazirXAPI("database/test.json")
-obj.getMyTokensData()
+# obj= WazirXAPI("database/test.json")
 
-# for item in obj.jsdb_myTokens._cacheddata.keys():
-#     obj.getTokenData(item)
-#     time.sleep(1)
-
-# obj.getAllData()
-
-del obj
+# del obj
