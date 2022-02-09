@@ -8,8 +8,8 @@ class CreateLogger():
     def log(self, _logfor: str, _logmessage: str):
         wf= open(self.file, "a")
 
-        logtime= datetime.datetime.now().strftime("%x%l:%m:%S %p")
-        wf.write(f"log @{logtime} for {_logfor}: {_logmessage}\n")
+        logtime= datetime.now().strftime("%x%l:%m:%S %p")
+        wf.write(f"log @ {logtime} for {_logfor}: {_logmessage}\n")
         
         wf.close()
         del wf

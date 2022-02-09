@@ -7,7 +7,7 @@ from wazirXAPI import WazirXAPI
     # if datetime.now().strftime("%x") == "00:00:00":
 
 # create new file
-fileCreator= FileCreator("database/24hour")
+fileCreator= FileCreator("database/24hour/")
 file= fileCreator.create24hourFile()
 
 # get data from wazirX
