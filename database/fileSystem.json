@@ -1,0 +1,13 @@
+{
+    "database"  :   {
+                    "24hour" : ["07Feb2022.json", "08Feb2022.json"],
+                    "mytokens"  :   "myTokens.json",
+                    "test"      :   "test.json",
+                    "global_vars":  "global_vars.json"
+                    },
+    "logs"      :   [
+                        "database-24hour.txt",
+                        "database-mytokens.txt",
+                        "database-test.txt"
+                    ]
+}
