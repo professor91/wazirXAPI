@@ -10,6 +10,7 @@ class WazirXAPI():
     def __init__(self, _pathtoFile : str):
         self.client= Client()
         self.jsdb_myTokens= jsdb("database/myTokens.json")
+        self.jsdb_test= jsdb("database/test.json")
         self.pathtoFile= _pathtoFile
         self.jsdb_file= jsdb(_pathtoFile)
 
@@ -18,7 +19,7 @@ class WazirXAPI():
     #   returns - None
     def getTokenData(self, _symbol: str):
         self.jsdb_file.addItem( _symbol, 
-                                self.client.send("ticker", {"symbol" : _symbol}))
+                                self.client.send("ticker", {"symbol" : _symbol})[1])
 
     #2. get data of all my tokens
     #   given   - None
@@ -41,8 +42,11 @@ class WazirXAPI():
         self.jsdb_test._cacheddata= list(self.client.send("tickers"))[1]
         self.jsdb_test.dumpdata()
         # print(self.client.send("tickers"))
+        print("got all data")
 
 
-# obj= WazirXAPI("database/test.json")
 
-# del obj
+obj= WazirXAPI("database/test.json")
+obj.getAllData()
+
+del obj
