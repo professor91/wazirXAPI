@@ -1,6 +1,6 @@
 from datetime import datetime
-from global_vars import FileManager
-from global_vars import db24hour_logger
+from libs.global_vars import FileManager
+from libs.global_vars import db24hour_logger
 
 # class for creating files
 class FileCreator:
