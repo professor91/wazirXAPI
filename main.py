@@ -1,17 +1,19 @@
-# from datetime import datetime
+from datetime import datetime
+import schedule
 
 from libs.file_creator import FileCreator
 from wazirXAPI import WazirXAPI
 
-# while True:
-    # if datetime.now().strftime("%x") == "00:00:00":
-
-# create new file
 fileCreator= FileCreator("database/24hour/")
-file= fileCreator.create24hourFile()
 
-# get data from wazirX
-wazirX= WazirXAPI(file)
-wazirX.getMyTokensData()
-print(f"Fetched data from WazirX API and loaded in {file}")
-del wazirX
+def job():
+    file= fileCreator.create24hourFile()    # create new file
+    wazirX= WazirXAPI(file)
+    wazirX.getMyTokensData()                # get data from wazirX
+    print(f"Fetched data from WazirX API and loaded in {file}")
+    del wazirX
+
+schedule.every().day.at("00:00").do(job)
+
+while True:
+    schedule.run_pending()
