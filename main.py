@@ -2,7 +2,7 @@ from datetime import datetime
 import schedule
 
 from libs.file_creator import FileCreator
-from wazirXAPI import WazirXAPI
+from libs.wazirXAPI import WazirXAPI
 
 fileCreator= FileCreator("database/24hour/")
 
