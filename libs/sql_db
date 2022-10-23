@@ -1,0 +1,109 @@
+import mysql.connector
+
+class sqldb:
+    def __init__(self, _host: str, _user: str, _pass: str):
+        # _host,_user,_pass= 'localhost', 'sem4','Sem4@2022'
+        
+        self.mydb= mysql.connector.connect(
+            host= _host,
+            user= _user,
+            password= _pass)
+
+    def createDB(self):
+        mycursor= self.mydb.cursor()
+        mycursor.execute("CREATE DATABASE wazirX")
+        mycursor.close()
+
+    #         f"""CREATE TABLE MyTokens(
+    #             NAME varchar(50), 
+    #             SYMBOL varchar(10)
+    #             )
+
+    
+    def createTable(self, _tableName: str,  **kwargs):
+        mycursor= self.mydb.cursor()
+        mycursor.execute("USE wazirX")
+
+        query= f"CREATE TABLE {_tableName}("
+
+        for key,value in kwargs.items():
+            query += (f"{str(key)} {str(value)}, ")
+    
+        query += "\b\b)"
+        print(query)
+        
+        mycursor.execute(query)
+        mycursor.close()
+
+    def insertData(self, _tableName: str, *args):
+        mycursor= self.mydb.cursor()
+
+        query= f"INSERT INTO {_tableName} VALUES("
+
+        for data in args:
+            query.join(f"{data}, ")
+        query.join(")")
+
+        mycursor.execute(query)
+        mycursor.close()
+
+
+    #         f"""CREATE TABLE {_name}
+    #             OPEN 
+    #             LOW
+    #             HIGH
+    #             CLOSE
+    #             VOLUME
+    #             DATETIME
+    #         """
+    #     )
+
+
+    def listDatabases(self):
+        mycursor= self.mydb.cursor()
+        
+        query= "SHOW"
+        query += " DATABASES"
+        mycursor.execute(query)
+
+        for x in mycursor:
+            print(x)
+
+        mycursor.close()
+
+    def listTables(self):
+        mycursor= self.mydb.cursor()
+
+        mycursor.execute("USE wazirX")
+        mycursor.execute("SHOW TABLES")
+
+        for x in mycursor:
+            print(x)
+
+        mycursor.close()
+
+    def deleteTables(self, _tableName: str):
+        mycursor= self.mydb.cursor()
+
+        mycursor.execute(F"DROP TABLE {_tableName}")
+
+        mycursor.close()
+    
+    def describeTable(self, _tableName: str):
+        mycursor= self.mydb.cursor()
+
+        mycursor.execute(F"DESCRIBE {_tableName}")
+
+        mycursor.close()
+
+x= sqldb('localhost', 'sem4','Sem4@2022')
+x.listDatabases()
+# x.createDB()
+# x.createMyTokenTable()
+# x.listTables()
+# x.deleteTables("MyTokens")
+# x.listTables()
+
+# x.createTable(_tableName= "MyTokens", NAME= "varchar(50)", SYMBOL= "varchar(10)")
+# x.listTables()
+# x.describeTable("MyTokens")
